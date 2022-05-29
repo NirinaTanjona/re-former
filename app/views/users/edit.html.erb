@@ -1,0 +1,10 @@
+<%= form_with method: :patch, model: @user do |form|%>
+  <%=form.text_field :username, placeholder: "username"%>
+  <%=<span>username is required</span> if @user.errors.where(:username).any? %>
+  <br><br>
+  <%=form.text_field :email, placeholder: "email" %>
+  <br><br>
+  <%=form.password_field :password, placeholder: "password"%>
+  <br><br>
+  <%=form.submit "subscribe" %>
+<% end %>
